@@ -1,0 +1,17 @@
+RISE
+jupyter
+nbformat
+nbconvert
+ipykernel
+matplotlib
+numpy
+# The graphed packages are expected to be installed from the graphed-workdir editable installs:
+# pip install -e graphed-workdir/graphed
+# pip install -e graphed-workdir/graphed-core
+# pip install -e graphed-workdir/graphed-numpy
+# pip install -e graphed-workdir/graphed-debug
+# pip install -e graphed-workdir/graphed-checkpoint
+# pip install -e graphed-workdir/graphed-awkward
+# pip install -e graphed-workdir/graphed-exec-local
+# pip install -e graphed-workdir/graphed-preserve
+# pip install -e graphed-workdir/graphed-histogram
