@@ -1,0 +1,47 @@
+/* graphed v5: force dark night-theme appearance + fit content to viewport.
+   Applies in both live RISE mode and nbconvert HTML slides (which default to a light theme). */
+.reveal-viewport, .reveal, .backgrounds, .slide-background { background: #1a1a2e !important; }
+.reveal { color: #eeeeee !important; font-size: 30px; }
+.reveal h1 { color: #4ecdc4 !important; font-size: 1.8em; }
+.reveal h2 { color: #4ecdc4 !important; font-size: 1.35em; margin-bottom: 0.4em; }
+.reveal h3 { color: #74b9ff !important; font-size: 1.1em; }
+.reveal p, .reveal li, .reveal td, .reveal th { color: #eeeeee !important; font-size: 0.72em; line-height: 1.35; }
+.reveal li { margin-bottom: 0.15em; }
+.reveal table { font-size: 0.9em; }
+/* Fenced code blocks */
+.reveal pre, .reveal pre code { font-size: 0.6em !important; line-height: 1.3; color: #eeeeee; }
+.reveal pre { box-shadow: none; background: #16213e; }
+.reveal pre code { background: #16213e; }
+/* Inline code (NOT inside pre): the night theme leaves it dark-on-dark / washed-out.
+   Force a visible color + subtle pill so backtick spans in prose are readable. */
+.reveal :not(pre) > code, .reveal p code, .reveal li code, .reveal td code {
+    color: #ffd479 !important;
+    background: #2a2a4a !important;
+    padding: 0 0.25em;
+    border-radius: 3px;
+    font-size: 0.92em;
+}
+.reveal .slides section { overflow: hidden !important; max-height: 100%; }
+.reveal blockquote { color: #a29bfe !important; font-size: 0.72em; background: #16213e; }
+.reveal strong { color: #ffeaa7 !important; }
+/* Hide the paragraph anchor symbol in slides */
+.reveal .anchor-link { display: none !important; }
+/* Output / dataframe text readable on dark bg */
+.reveal .output_subarea pre, .reveal .jp-RenderedText pre { color: #eeeeee !important; }
+.reveal .rendered_html table, .reveal .dataframe { color: #eeeeee !important; }
+/* Tables: night theme + nbconvert/jupyter inject a light striped background that
+   makes dark cell text washed-out. Force dark cells + light text + readable striping. */
+.reveal table, .reveal thead, .reveal tbody, .reveal tr, .reveal th, .reveal td {
+    background: #1a1a2e !important; color: #eeeeee !important; border-color: #2a2a4a !important;
+}
+.reveal tbody tr:nth-child(even), .reveal tbody tr:nth-child(2n) { background: #20203a !important; }
+.reveal tbody tr:nth-child(odd) { background: #1a1a2e !important; }
+.reveal table th { color: #4ecdc4 !important; border-bottom: 1px solid #4ecdc4 !important; }
+/* Jupyter output (stream/text) pre: keep small + no-wrap so long printed code fits the slide */
+.reveal .jp-OutputArea-output pre, .reveal .jp-RenderedText pre, .reveal .jp-OutputArea pre {
+    font-size: 0.6em !important; line-height: 1.3 !important; color: #eeeeee !important;
+    white-space: pre-wrap !important; background: transparent !important;
+}
+.reveal .jp-OutputArea-prompt, .reveal .jp-InputArea-prompt { display: none !important; }
+/* Input code blocks: a touch smaller so visible-source demo slides fit */
+.reveal .jp-InputArea pre, .reveal .highlight pre { font-size: 0.6em !important; line-height: 1.3 !important; }
